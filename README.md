@@ -1,6 +1,6 @@
 # Comp165 Major Programming Assignment 2
 
-# Spring 2017
+# Fall 2024
 
 Implement the following classes that will be used to track personnel at
 a university. Use data encapsulation to hide implementation details from
@@ -12,9 +12,7 @@ standard will be severely penalized.
 
 Each class will have mutator and accessor methods for each property
 except ArrayLists. ArrayList properties will have num, get, set, add and
-delete behaviors as described in MP1. Date properties will be set with a
-String and return Strings with getter methods but will be represented
-internally by Date objects.
+delete behaviors as described in MP1. 
 
 ## Class Descriptions:
 
@@ -23,15 +21,14 @@ internally by Date objects.
 ### Person:
 
 This class includes the following **protected** properties:
-firstname:String, lastname:String, studentId:String, birthDate:Date,
+firstname:String, lastname:String, studentId:String, birthDate:String,
 phoneNumber:String and represents a generic person. In addition to the
 mutator and assessors, include a no-arg constructor that sets the
 properties to reasonable default values and a constructor with
 parameters for each property – Person( fname:String, lname:String,
 sId:String, birthDate:String, phoneNumber:String). Note: your
-constructor code should use the String format of the date “mm/dd/yyyy”
-to initialize the instance variable that is of type Date. Include a
-toString() method returns each field in the class separated by a comma:
+constructor code should use the String format of “mm/dd/yyyy” for properties
+storing dates. Include a toString() method returns each field in the class separated by a comma:
 
 Kelvin, Bryant, 8574945, 9/26/1964, 336-444-4444
 
@@ -79,7 +76,7 @@ Engineeering, RA
 ### Employee:
 
 This class inherits from Person and includes these additional protected
-properties: hireDate:Date, status:String (FT for full-time, PT for
+properties: hireDate:String, status:String (FT for full-time, PT for
 part-time), department:String. Include a no-arg constructor only. The
 toString() returns the Person properties followed by the additional
 Employee properties:
